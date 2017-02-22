@@ -1,10 +1,12 @@
-package com.prt.beatbox;
+package com.prt.beatbox.activity;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+
+import com.prt.beatbox.R;
 
 /**
  * Created by Pikalova Lena on 2/22/2017.

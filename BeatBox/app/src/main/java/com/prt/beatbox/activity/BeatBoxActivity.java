@@ -1,8 +1,8 @@
-package com.prt.beatbox;
+package com.prt.beatbox.activity;
 
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
+import com.prt.beatbox.fragment.BeatBoxFragment;
 
 public class BeatBoxActivity extends SingleFragmentActivity {
     @Override

@@ -1,7 +1,6 @@
-package com.prt.beatbox;
+package com.prt.beatbox.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,6 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.prt.beatbox.R;
+import com.prt.beatbox.helper.BeatBox;
+import com.prt.beatbox.model.Sound;
 
 import java.util.List;
 
