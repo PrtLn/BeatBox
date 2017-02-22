@@ -51,6 +51,12 @@ public class BeatBoxFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mBeatBox.release();
+    }
+
     // creating a widget ViewHolder
     private class SoundHolder extends RecyclerView.ViewHolder
                                 implements View.OnClickListener {
