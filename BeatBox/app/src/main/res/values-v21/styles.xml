@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <!-- Base application theme. -->
-        <style name="AppTheme" parent="Theme.AppCompat">
-            <item name="colorPrimary">@color/red</item>
-            <item name="colorPrimaryDark">@color/dark_red</item>
-            <item name="colorAccent">@color/gray</item>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/dark_red</item>
+        <item name="colorAccent">@color/gray</item>
 
-            <item name="android:colorBackground">@color/soothing_blue</item>
-            <item name="android:buttonStyle">@style/BeatBoxButton</item>
-            <item name="android:textColor">@color/light_text</item>
-        </style>
+        <item name="android:colorBackground">@color/soothing_blue</item>
+        <item name="android:buttonStyle">@style/BeatBoxButton</item>
+        <item name="android:textColor">@color/light_text</item>
+    </style>
 
-        <style name="BeatBoxButton" parent="android:Widget.Material.Button">
-            <item name="android:background">@color/soothing_blue</item>
-        </style>
+    <style name="BeatBoxButton" parent="android:Widget.Material.Button">
+        <item name="android:background">@drawable/button_beat_box_normal</item>
+    </style>
 </resources>
