@@ -22,11 +22,14 @@ import java.util.List;
 
 public class BeatBoxFragment extends Fragment {
 
+    private static final int GRID_COLUMNS = 3;
     private BeatBox mBeatBox;
 
     public static BeatBoxFragment newInstance() {
         return new BeatBoxFragment();
     }
+
+    // Lifecycle methods
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,9 +46,11 @@ public class BeatBoxFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beat_box, container, false);
 
+        mBeatBox = new BeatBox(getActivity());
+
         RecyclerView recyclerView = (RecyclerView) view
                 .findViewById(R.id.fragment_beat_box_recycler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), GRID_COLUMNS));
 
         recyclerView.setAdapter(new SoundAdapter(mBeatBox.getSounds()));
 
@@ -58,6 +63,8 @@ public class BeatBoxFragment extends Fragment {
         mBeatBox.release();
     }
 
+    // Private classes for RecyclerView
+
     // creating a widget ViewHolder
     private class SoundHolder extends RecyclerView.ViewHolder
                                 implements View.OnClickListener {
@@ -68,21 +75,24 @@ public class BeatBoxFragment extends Fragment {
             super(inflater.inflate(R.layout.list_item_sound, container, false));
 
             mButton = (Button) itemView.findViewById(R.id.list_item_sound_button);
-            mButton.setOnClickListener(this);
+            // mButton.setOnClickListener(this);
         }
 
         public void bindSound(Sound sound) {
             mSound = sound;
             mButton.setText(mSound.getName());
+            mButton.setOnClickListener(this);
         }
 
+        // OnClickListener Interface method
         @Override
         public void onClick(View v) {
             mBeatBox.play(mSound);
         }
     }
 
-    //creating an adapter
+    // creating an adapter to manage the recyclerviews data binding
+
     private class SoundAdapter extends RecyclerView.Adapter<SoundHolder> {
         private List<Sound> mSounds;
 
